@@ -2,7 +2,7 @@ import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import { addDays } from 'date-fns';
 
-import { FixedHeader, PostArticles, UpdateLog, Header } from '../components';
+import { FixedHeader, PostArticles, UpdateLog, Header, NatoriSana } from '../components';
 import { endpoint, endpointV1 } from '../constants';
 import { AudioProvider } from '../contexts';
 import { ButtonsBySlug, ButtonInfo } from '../lib/types';
@@ -51,6 +51,8 @@ export default function Index(props: Props) {
       <hr style={{ margin: '1em 0' }} />
       {/* <AdArticles></AdArticles> */}
       <PostArticles slugs={slugs} buttonsBySlug={buttonsBySlug} />
+      <NatoriSana />
+      {/* <BroadCastLinkList /> */}
       {/* <Footer /> */}
     </AudioProvider>
   );
